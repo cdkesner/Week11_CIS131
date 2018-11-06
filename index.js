@@ -1,17 +1,12 @@
-const loadJsonFile = require('load-json-file');
-loadJsonFile('data.json');
+const jsonfile = require('jsonfile')
+const file = 'json/data.json'
+jsonfile.readFile(file, function (err, obj) {
+  if (err) console.error(err)
+  console.dir(obj)
+})
 
 var _ = require('lodash');
 
-_.forEach(items, value => {
+_.forEach(_items => {
     console.log(value);
 });
-
-/*for (var prop in items){
-    console.log(`${prop} ${items[prop]}`);
-}*/
-
-/*loadJsonFile('data.json').then(json => {
-    console.log(json);
-    //=> {data: true}
-});*/
