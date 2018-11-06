@@ -7,6 +7,6 @@ jsonfile.readFile(file, function (err, obj) {
 
 var _ = require('lodash');
 
-_.forEach(_items => {
-    console.log(value);
-});
+/*_.forEach(items, index => {
+    console.log(`${items.fname} ${items.lname} is ${items.age} years old`);
+});*/
